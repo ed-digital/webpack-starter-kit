@@ -1,5 +1,3 @@
-'use strict';
-
 import BlackTriangle from "./BlackTriangle";
 
 const triangle = new BlackTriangle('#triangle');
