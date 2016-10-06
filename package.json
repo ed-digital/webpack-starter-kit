@@ -1,5 +1,5 @@
 {
-  "name": "testbuild",
+  "name": "my-project",
   "version": "1.0.0",
   "description": "",
   "main": "src/main.js",
@@ -16,6 +16,8 @@
     "babel-preset-es2015": "^6.16.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.22.0",
     "node-sass": "^3.10.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
@@ -24,7 +26,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC"
