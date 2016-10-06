@@ -22,10 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         include: path.join(__dirname, 'src'),
-        loader: 'babel-loader',
-        query: {
-          presets: ["es2015"],
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.html$/,
