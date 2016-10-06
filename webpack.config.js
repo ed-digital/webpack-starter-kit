@@ -9,7 +9,7 @@ module.exports = {
     './src/scss/main.scss',
     './src/js/main',
     './src/index.html',
-    // 'webpack-dev-server/client?http://localhost:8080'
+    'webpack-dev-server/client?http://localhost:8080'
   ],
   output: {
     path: './dist',
@@ -44,8 +44,7 @@ module.exports = {
   ],
   debug: true,
   devServer: {
-    contentBase: "./src",
-    hot: true
+    contentBase: "./src"
   },
   sassLoader: {
     sourceMap: true
