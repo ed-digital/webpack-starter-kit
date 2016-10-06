@@ -5,11 +5,11 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: [
-    'babel-polyfill',
+    // 'babel-polyfill',
     './src/scss/main.scss',
     './src/js/main',
     './src/index.html',
-    'webpack-dev-server/client?http://localhost:8080'
+    // 'webpack-dev-server/client?http://localhost:8080'
   ],
   output: {
     path: './dist',
@@ -34,7 +34,6 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer-loader!sass-loader?sourceMap")
-        // loader: "style!css!autoprefixer!sass"
       }
     ]
   },
@@ -42,11 +41,14 @@ module.exports = {
     new ExtractTextPlugin("style.css", {
       allChunks: true
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
   ],
   debug: true,
   devServer: {
-    contentBase: "./src"
+    contentBase: "./src",
+    hot: true
   },
   sassLoader: {
     sourceMap: true
